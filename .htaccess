@@ -1,0 +1,10 @@
+AddDefaultCharset utf-8
+
+RewriteEngine on
+ErrorDocument 404 https://http://shop.ru/err404.php
+RewriteBase /
+# ErrorDocument 404 https://http://shop.ru/errors/404.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php
